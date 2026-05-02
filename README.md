@@ -1,4 +1,4 @@
-# LegacyLauncher
+# MCLegacy
 
 A custom launcher for Minecraft Legacy Console Edition.
 
