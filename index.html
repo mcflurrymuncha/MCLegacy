@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegacyLauncher</title>
+    <title>MCLegacy</title>
     <link rel="icon" type="image/png" href="assets/512x512.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,7 @@
 <body>
 
     <div class="title-bar">
-        <div class="title-bar-text">LegacyLauncher</div>
+        <div class="title-bar-text">MCLegacy</div>
         <div class="window-controls">
             <div class="win-btn nav-item" onclick="minimizeWindow()" tabindex="0" title="Minimize">−</div>
             <div class="win-btn nav-item" id="maximize-btn" onclick="toggleMaximize()" tabindex="0" title="Maximize / Restore">▢</div>
@@ -22,18 +22,18 @@
     <div id="loader">
         <div class="loader-content">
             <div class="loader-spinner"></div>
-            <div id="loader-text"><span id="loader-text-label">CONNECTING</span><span class="loading-dots animate" id="loader-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></div>
+            <div id="loader-text"><span id="loader-text-label">Connecting...</span><span class="loading-dots animate" id="loader-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></div>
         </div>
     </div>
 
     <div id="offline-indicator" style="display: none; position: fixed; top: 40px; left: 50%; transform: translateX(-50%); background: #c42b1c; color: #fff; padding: 5px 20px; border: 2px solid #000; z-index: 100; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
-        OFFLINE MODE — UPDATES DISABLED
+        You are currently Offline, Updates are Disabled
     </div>
 
     <div class="main-wrapper">
         <div class="sidebar collapsed" id="main-sidebar">
             <div class="sidebar-title" onclick="toggleSidebar()">
-                <span id="sidebar-title-text">PATCH NOTES</span>
+                <span id="sidebar-title-text">Patch Notes</span>
                 <span id="sidebar-toggle-icon" title="Expand Patch Notes">▶</span>
             </div>
             <div id="updates-list">
@@ -88,7 +88,7 @@
                 
                 <div class="skin-action-row" style="margin-top: -20px; z-index: 10; margin-left: auto; margin-right: auto;">
                     <div class="btn-mc nav-item skin-action-btn skin-action-btn-main" onclick="openSkinManager()" tabindex="0">
-                        CHANGE SKIN
+                        Change Skin
                     </div>
                     <div id="btn-skin-render-mode" class="btn-mc nav-item skin-action-btn skin-action-btn-mode" onclick="toggleMainSkinRenderMode()" tabindex="0">3D</div>
                 </div>
@@ -108,7 +108,7 @@
 
     <div class="modal-overlay" id="servers-modal">
         <div class="modal-box">
-            <div class="modal-title">CUSTOM SERVERS</div>
+            <div class="modal-title">Servers</div>
 
             <div id="servers-list-container" class="w-full max-h-[300px] overflow-y-auto mb-6 border-2 border-[#555] bg-black p-2">
                 <!-- Servers will be listed here -->
@@ -140,7 +140,7 @@
 
     <div class="modal-overlay" id="instances-modal">
         <div class="modal-box" style="max-width: 900px;">
-            <div class="modal-title">GAME INSTANCES</div>
+            <div class="modal-title">Instances</div>
 
             <div id="instances-list-container" class="w-full max-h-[400px] overflow-y-auto mb-6 border-2 border-[#555] bg-black p-2">
                 <!-- Instances will be listed here -->
@@ -156,7 +156,7 @@
 
     <div class="modal-overlay" id="add-instance-modal">
         <div class="modal-box" style="max-width: 600px;">
-            <div class="modal-title" style="font-size: 32px;">NEW INSTANCE</div>
+            <div class="modal-title" style="font-size: 32px;">New Instance</div>
             
             <div class="mc-input-group">
                 <label class="mc-label">Instance Name:</label>
@@ -177,7 +177,7 @@
 
     <div class="modal-overlay" id="snapshots-modal">
         <div class="modal-box" style="max-width: 800px;">
-            <div class="modal-title">SNAPSHOTS / ROLLBACK</div>
+            <div class="modal-title">Snapshots / Rollback</div>
             <div id="snapshot-instance-name" style="color: #aaa; text-align: center; margin-top: -15px; margin-bottom: 20px; text-transform: uppercase;">Instance Name</div>
 
             <div id="snapshots-list-container" class="w-full max-h-[350px] overflow-y-auto mb-6 border-2 border-[#555] bg-black p-2">
@@ -193,7 +193,7 @@
 
     <div class="modal-overlay" id="options-modal">
         <div class="modal-box">
-            <div class="modal-title">LAUNCHER OPTIONS</div>
+            <div class="modal-title">Launcher Source</div>
 
             <div class="mc-input-group">
                 <label class="mc-label">Installation Directory:</label>
@@ -275,7 +275,7 @@
             <div class="mc-input-group">
                 <label class="mc-label" style="display: flex; align-items: center; cursor: pointer;">
                     <input type="checkbox" id="classic-theme-checkbox" class="nav-item" style="width: 24px; height: 24px; margin-right: 12px; cursor: pointer;" tabindex="0">
-                    Use Classic Minecraft Launcher UI
+                    Use Classic Minecraft Launcher UI (Broken)
                 </label>
             </div>
 
@@ -306,30 +306,30 @@
             </div>
 
             <div class="flex gap-4 w-full mt-4">
-                <div id="btn-options-done" class="btn-mc flex-grow nav-item" onclick="saveOptions()" tabindex="0">DONE</div>
-                <div id="btn-options-cancel" class="btn-mc flex-grow nav-item" onclick="toggleOptions(false)" tabindex="0">CANCEL</div>
+                <div id="btn-options-done" class="btn-mc flex-grow nav-item" onclick="saveOptions()" tabindex="0">Done</div>
+                <div id="btn-options-cancel" class="btn-mc flex-grow nav-item" onclick="toggleOptions(false)" tabindex="0">Cancel</div>
             </div>
         </div>
     </div>
 
     <div class="modal-overlay" id="gallery-modal">
         <div class="modal-box" style="max-width: 1000px; width: 85vw; height: 85vh;">
-            <div class="modal-title">SCREENSHOTS GALLERY</div>
+            <div class="modal-title">Screenshots</div>
             
             <div id="gallery-container" class="w-full flex-grow overflow-y-auto mb-6 border-2 border-[#555] bg-black p-4 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-max">
                 <!-- Screenshots will be dynamically loaded here -->
             </div>
 
             <div class="flex gap-4 w-full">
-                <div class="btn-mc flex-grow nav-item" onclick="openScreenshotsDir()" tabindex="0">OPEN FOLDER</div>
-                <div class="btn-mc flex-grow nav-item" onclick="toggleGallery(false)" tabindex="0">DONE</div>
+                <div class="btn-mc flex-grow nav-item" onclick="openScreenshotsDir()" tabindex="0">Open Folder</div>
+                <div class="btn-mc flex-grow nav-item" onclick="toggleGallery(false)" tabindex="0">Done</div>
             </div>
         </div>
     </div>
 
     <div class="modal-overlay" id="profile-modal">
         <div class="modal-box">
-            <div class="modal-title">PLAYER PROFILE</div>
+            <div class="modal-title">Player Profile</div>
 
             <div class="mc-input-group">
                 <label class="mc-label">In-Game Username:</label>
@@ -342,8 +342,8 @@
             </div>
 
             <div class="flex gap-4 w-full mt-4">
-                <div id="btn-profile-save" class="btn-mc flex-grow nav-item" onclick="saveProfile()" tabindex="0">SAVE</div>
-                <div id="btn-profile-cancel" class="btn-mc flex-grow nav-item" onclick="toggleProfile(false)" tabindex="0">CANCEL</div>
+                <div id="btn-profile-save" class="btn-mc flex-grow nav-item" onclick="saveProfile()" tabindex="0">Save</div>
+                <div id="btn-profile-cancel" class="btn-mc flex-grow nav-item" onclick="toggleProfile(false)" tabindex="0">Cancel</div>
             </div>
         </div>
     </div>
@@ -353,20 +353,20 @@
             <div class="modal-close-btn" id="btn-close-update">×</div>
             <div id="update-modal-text" class="modal-body-text" style="display: none; margin-bottom: 20px;"></div>
             <div class="flex gap-4 w-full">
-                <div class="btn-mc flex-grow nav-item" id="btn-confirm-update">UPDATE NOW</div>
-                <div class="btn-mc flex-grow nav-item" id="btn-skip-update">LATER</div>
+                <div class="btn-mc flex-grow nav-item" id="btn-confirm-update">Update Now</div>
+                <div class="btn-mc flex-grow nav-item" id="btn-skip-update">Later</div>
             </div>
         </div>
     </div>
 
     <div class="modal-overlay" id="skin-modal" style="display: none;">
         <div class="modal-box" style="max-width: 900px; background: var(--mc-gui-bg); border: 4px solid #000; padding: 30px; box-shadow: inset 4px 4px 0 #fff;">
-            <div class="modal-title" style="margin-bottom: 25px;">SKIN UPLOADER</div>
+            <div class="modal-title" style="margin-bottom: 25px;">Skin Editor</div>
             
             <div id="drop-zone" class="nav-item" style="width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; background: #000; border: 2px solid #555; cursor: pointer; margin-bottom: 20px;" tabindex="0">
                 <input type="file" id="skin-input" accept=".png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
                 <div id="upload-prompt" class="text-center">
-                    <p class="text-xl text-white" style="text-shadow: 2px 2px 0 #000;">CLICK OR DRAG SKIN HERE</p>
+                    <p class="text-xl text-white" style="text-shadow: 2px 2px 0 #000;">Select or Drag Skin File Here!</p>
                     <p class="text-xs text-gray-400 mt-1 uppercase font-bold" style="letter-spacing: 2px;">64x32 or 64x64 PNG</p>
                 </div>
             </div>
@@ -376,7 +376,7 @@
                     <!-- 3D Preview Panel -->
                     <div class="relative bg-black rounded-none border-2 border-[#555] flex flex-col items-center overflow-hidden w-1/2">
                         <div id="skin-viewer-container" class="w-full h-full"></div>
-                        <div style="position: absolute; bottom: 10px; left: 10px; color: #55ff55; font-size: 14px; text-shadow: 1px 1px 0 #000; z-index: 5;">3D PREVIEW</div>
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: #55ff55; font-size: 14px; text-shadow: 1px 1px 0 #000; z-index: 5;">3D Preview</div>
                     </div>
 
                     <!-- info/2D Panel -->
@@ -385,28 +385,28 @@
                             <div class="relative" style="margin-bottom: 15px;">
                                 <canvas id="skin-canvas" width="64" height="32" class="pixelated" style="width: 256px; height: 128px; image-rendering: pixelated; border: 2px solid #555;"></canvas>
                             </div>
-                            <div style="color: #aaa; font-size: 14px; text-align: center; text-transform: uppercase;">LEGACY OUTPUT (64x32)</div>
+                            <div style="color: #aaa; font-size: 14px; text-align: center; text-transform: uppercase;">Legacy Output (64x32)</div>
                             <div id="status-message" style="margin-top: 10px; font-size: 18px;"></div>
                         </div>
 
                         <div style="background: rgba(0,0,0,0.3); padding: 15px; border: 2px solid #555; color: #eee; font-size: 16px;">
                             <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #555; padding-bottom: 8px; margin-bottom: 8px;">
-                                <span>DETECTED:</span>
+                                <span>Detected:</span>
                                 <span id="format-label" style="color: #fff;">--</span>
                             </div>
                             <div style="display: flex; justify-content: space-between;">
-                                <span>TARGET:</span>
+                                <span>Target:</span>
                                 <span style="color: #888; font-size: 14px;">Common/res/mob/char.png</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="save-skin-btn" class="btn-mc w-full nav-item" tabindex="0">SAVE SKIN</div>
+                <div id="save-skin-btn" class="btn-mc w-full nav-item" tabindex="0">Save Skin!</div>
             </div>
 
             <div class="flex justify-center w-full mt-6">
-                 <div id="btn-close-skin" class="btn-mc nav-item !mb-0" onclick="closeSkinManager()" tabindex="0">DONE</div>
+                 <div id="btn-close-skin" class="btn-mc nav-item !mb-0" onclick="closeSkinManager()" tabindex="0">Close</div>
             </div>
         </div>
     </div>
@@ -426,7 +426,7 @@
 
         <!-- Center: Play Button -->
         <div class="classic-center-section">
-            <div class="btn-mc btn-play classic-play-btn nav-item" id="classic-btn-play" onclick="launchGame()" tabindex="0">PLAY</div>
+            <div class="btn-mc btn-play classic-play-btn nav-item" id="classic-btn-play" onclick="launchGame()" tabindex="0">Play!</div>
         </div>
 
         <!-- Right: Version + Nav -->
@@ -452,7 +452,7 @@
         </div>
     </div>
 
-    <div id="toast">NOTIFICATION</div>
+    <div id="toast">Notification</div>
 
     <div id="music-toggle" class="music-btn nav-item" onclick="toggleMusic()" title="Toggle Music" tabindex="0">
         <span id="music-icon">♪</span>
